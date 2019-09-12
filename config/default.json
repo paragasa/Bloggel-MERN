@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb**************",
+    "jwtSecret": "*********"
+    
+
+}
