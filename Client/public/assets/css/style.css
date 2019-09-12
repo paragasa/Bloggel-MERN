@@ -1,0 +1,237 @@
+:root{
+  --color-primary: #b0ccdd;
+  --color-primary-light: ##d8dad9;
+  --color-primary-dark: #4f6a79;
+  --color-white: #ffff;
+  --color-black: #464646;
+  --xs : 778px;
+  --sm: 768px;
+  --md:  992px;
+  --lg: 1200px;
+}
+/* 
+xs (for phones -768px wide)
+sm (for tablets -  768px wide)
+md (for small laptops -  992px wide)
+lg (for laptops and  1200px wide) */
+
+.thesaas-sections-split .section,
+.thesaas-sections-split .main-content .topbar,
+.thesaas-sections-split .main-content .site-footer {
+  margin: 30px 50px 100px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ebebeb;
+}
+
+.thesaas-sections-split .main-content .topbar {
+  position: static;
+}
+
+.thesaas-sections-split .main-content .topbar .topbar-toggler {
+  display: none;
+}
+
+.thesaas-sections-split .section-info {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-top: 60px;
+}
+
+.thesaas-sections-split.topbar-reveal .main-content .topbar-nav {
+  display: none;
+}
+
+@media (max-width: 778px) {
+
+  .thesaas-sections-split .section,
+  .thesaas-sections-split .main-content .site-footer {
+    margin: 30px 0 100px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+}
+.header-title{
+  font-size: 10rem;
+  font-weight: 800;
+  color: var(--color-black);
+  animation: slideInLeftSkew .5s ease-in;
+
+}
+.header-subtitle{
+  font-size: 2rem;
+  animation: slideInRightSkew .5s ease-in ;
+  
+}
+.header-title:hover{
+  color: var(--color-primary);
+}
+
+@media only screen and (max-width: 778px){
+  .header-title{
+    font-size: 5rem;
+    
+  }
+  .header-subtitle{
+    font-size: 1rem;
+  }
+}
+
+
+.logo-default:hover, .logo-inverse:hover{
+  transform: translateY(-4px);
+}
+
+/* header */
+.topbar-left{
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+.topbar-toggler{
+  display: flex;
+ 
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  height: 2rem;
+  position: relative;
+  transition: all 1s;
+}
+
+.bar{
+  position: absolute;
+  background-color: white;
+  height: 1px;
+  width: 2rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+
+.bar-1{
+  top : 25%;
+  transition-delay: .3s
+}
+.topbar-toggler:hover > .bar-1{
+  top: 0;
+  transition-delay: .1s
+}
+.bar-2{
+  transition-delay: .2s
+}
+.topbar-toggler:hover > .bar-2{
+  top: 25%;
+  transition-delay: .2s
+  
+}
+.bar-3{
+  top: 75%;
+  transition-delay: .1s
+}
+.topbar-toggler:hover > .bar-3{
+  top: 50%;
+  transition-delay: .3s
+  
+}
+.nav-link{
+  border: none;
+}
+.nav-link:hover{
+  
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.articles-flex{
+  display: flex;
+  flex-direction: column;
+}
+.articles-box{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.article-item{
+  box-shadow: 0 1px 5px rgba(0,0,0,.2);
+  transition: all .7s;
+}
+.article-item:hover{
+  transform: scale(1.05);
+}
+
+.btn-primary{
+  background-color: var(--color-primary)!important;
+  border-color: var(--color-primary-dark)!important;
+}
+.btn-primary:hover{
+  background-color: var(--color-primary-dark)!important;
+  animation : pulse 4s infinite;
+}
+
+.btn-page{
+  cursor: pointer;
+}
+.btn-page:hover{
+  background-color: var(--color-primary);
+  animation : pulse 1s infinite;
+  transition: all 4s;
+}
+
+/* footer */
+.footer-p{
+  font-size: .8rem;
+}
+@keyframes pulse{
+  0%{
+    transform: scale(1);
+  
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform:  scale(1);
+  }
+}
+
+
+@keyframes slideInLeftSkew{
+  0%{
+    transform: translateX(-100%) skewX(30deg);
+  
+  }
+  100%{
+    transform: translateX(0) skewX(0);
+  }
+}
+@keyframes slideInRightSkew{
+  0%{
+    transform: translateX(100%) skewX(-30deg);
+  
+  }
+  100%{
+    transform: translateX(0) skewX(0);
+  }
+}
+@keyframes slideInLeft{
+  0%{
+    transform: translateX(-100%);
+  
+  }
+  100%{
+    transform: translateX(0) skewX(0);
+  }
+}
+@keyframes slideInRight{
+  0%{
+    transform: translateX(100%);
+  
+  }
+  100%{
+    transform: translateX(0) skewX(0);
+  }
+}
